@@ -3,18 +3,20 @@ import Exercise_6.Point;
 
 public class Straight{
 
-    private String width;
+    private double width;
     private Point pOne;
     private Point pTwo;
 
-    public Straight(String width, Point pOne, Point pTwo){
+    public Straight(double width, Point pOne, Point pTwo){
       this.width = width;
       this.pOne = pOne;
       this.pTwo = pTwo;
     }
 
-    public Straight(String width, int xOne, int xTwo, int yOne, int yTwo){
+    public Straight(double width, int xOne, int xTwo, int yOne, int yTwo){
         this.width = width;
+        this.pOne = new Point();
+        this.pTwo = new Point();
         this.pOne.setX(xOne);
         this.pTwo.setX(xTwo);
         this.pOne.setY(yOne);
@@ -22,26 +24,29 @@ public class Straight{
     }
 
     public boolean isHorizontal(){
-        return width.equals("horizontal") ? true : false;
+        return pOne.getY() == pTwo.getY() ? true : false;
     }
 
     public boolean isVertical(){
-        return width.equals("vertical") ? true : false;
+        return pOne.getX() == pTwo.getX() ? true : false;
     }
 
-    public Point highestPoint(Point one, Point Two){
-
-        return pOne;
+    public Point highestPoint(Straight s){
+        return s.pOne.getY() > s.pTwo.getY() ? s.pOne : s.pTwo;
     }
 
-    public int length(int number){
+    public double length(){
+        double x1 = pOne.getX();
+        double y1 = pOne.getY();
 
-        return 0;
+        double x2 = pTwo.getX();
+        double y2 = pTwo.getY();
+
+        return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
     }
 
-    public Straight longest(Straight one, Straight two){
-
-        return one;
+    public static Straight longest(Straight one, Straight two){
+        return one.length() > two.length() ? one : two;
     }
 
     public void show(){
