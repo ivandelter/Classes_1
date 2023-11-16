@@ -11,7 +11,7 @@ public class main {
 
         System.out.println("Is horizontal: " + first.isHorizontal());
         System.out.println("Is vertical: " + first.isVertical());
-        System.out.println("The highest point is: " + first.highestPoint(first));
+        System.out.println("The highest point is: " + first.highestPoint());
         System.out.println("The length is: " + first.length());
 
         Straight second = new Straight(4, 5.0, 6.0, -3.0, -5.0);

@@ -24,23 +24,22 @@ public class Straight{
     }
 
     public boolean isHorizontal(){
-        return pOne.getY() == pTwo.getY() ? true : false;
+        return this.pOne.getY() == this.pTwo.getY() ? true : false;
     }
 
     public boolean isVertical(){
-        return pOne.getX() == pTwo.getX() ? true : false;
+        return this.pOne.getX() == this.pTwo.getX() ? true : false;
     }
 
-    public Point highestPoint(Straight s){
-        return s.pOne.getY() > s.pTwo.getY() ? s.pOne : s.pTwo;
+    public Point highestPoint(){
+        return this.pOne.getY() > this.pTwo.getY() ? this.pOne : this.pTwo;
     }
 
     public double length(){
-        double x1 = pOne.getX();
-        double y1 = pOne.getY();
-
-        double x2 = pTwo.getX();
-        double y2 = pTwo.getY();
+        double x1 = this.pOne.getX();
+        double y1 = this.pOne.getY();
+        double x2 = this.pTwo.getX();
+        double y2 = this.pTwo.getY();
 
         return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
     }
