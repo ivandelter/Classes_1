@@ -5,8 +5,8 @@ public class main {
 
     public static void main(String[] args) {
 
-        Point p1 = new Point(2, 2);
-        Point p2 = new Point(-5, 3);
+        Point p1 = new Point(2.0, 2.0);
+        Point p2 = new Point(-5.0, 3.0);
         Straight first = new Straight(5, p1, p2);
 
         System.out.println("Is horizontal: " + first.isHorizontal());
@@ -14,7 +14,7 @@ public class main {
         System.out.println("The highest point is: " + first.highestPoint(first));
         System.out.println("The length is: " + first.length());
 
-        Straight second = new Straight(4, 5, 6, -3, -5);
+        Straight second = new Straight(4, 5.0, 6.0, -3.0, -5.0);
 
         System.out.println("The longest is: " + Straight.longest(first, second));
 

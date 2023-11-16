@@ -3,17 +3,17 @@ import Exercise_6.Point;
 
 public class Straight{
 
-    private double width;
+    private int width;
     private Point pOne;
     private Point pTwo;
 
-    public Straight(double width, Point pOne, Point pTwo){
+    public Straight(int width, Point pOne, Point pTwo){
       this.width = width;
       this.pOne = pOne;
       this.pTwo = pTwo;
     }
 
-    public Straight(double width, int xOne, int xTwo, int yOne, int yTwo){
+    public Straight(int width, double xOne, double xTwo, double yOne, double yTwo){
         this.width = width;
         this.pOne = new Point();
         this.pTwo = new Point();
