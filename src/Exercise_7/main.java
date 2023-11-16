@@ -18,6 +18,9 @@ public class main {
 
         System.out.println("The longest is: " + Straight.longest(first, second));
 
+        first.show();
+        second.show();
+
     }
 
 }
