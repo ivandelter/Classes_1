@@ -31,8 +31,12 @@ public class Straight{
         return this.pOne.getX() == this.pTwo.getX() ? true : false;
     }
 
-    public Point highestPoint(){
-        return this.pOne.getY() > this.pTwo.getY() ? this.pOne : this.pTwo;
+    public void highestPoint(){
+        if(this.pOne.getY() > this.pTwo.getY()){
+            this.pOne.show();
+        }else{
+            this.pTwo.show();
+        }
     }
 
     public double length(){
@@ -44,8 +48,12 @@ public class Straight{
         return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
     }
 
-    public static Straight longest(Straight one, Straight two){
-        return one.length() > two.length() ? one : two;
+    public static void longest(Straight one, Straight two){
+        if(one.length() > two.length()){
+            one.show();
+        } else{
+            two.show();
+        }
     }
 
     public void show(){
