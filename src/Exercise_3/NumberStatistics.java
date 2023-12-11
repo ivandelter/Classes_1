@@ -15,7 +15,10 @@ public class NumberStatistics {
     }
 
     public void setNumbers(int[] numbers){
-        this.numbers = numbers;
+        for(int i = 0; i < numbers.length; i++){
+            this.numbers[i] = numbers[i];
+        }
+        //this.numbers = numbers;
     }
 
     public void addNumbers(int number){

@@ -1,11 +1,11 @@
 package Exercise_4;
 
-public class Circumference {
+public class Circumference_Solved {
 
-    private double radius;
+    private float radius;
     private String color;
 
-    public Circumference(double radius, String color){
+    public Circumference_Solved(float radius, String color){
         this.radius = radius;
         this.color = color;
     }
@@ -18,7 +18,7 @@ public class Circumference {
         return this.color;
     }
 
-    public void setRadius(double radius){
+    public void setRadius(float radius){
         this.radius = radius;
     }
 
@@ -26,23 +26,25 @@ public class Circumference {
         this.color = color;
     }
 
-    public double area(){
-        return Math.PI*(Math.pow(this.radius, 2));
+    public float area(){
+        return (float) (Math.PI * (Math.pow(this.radius, 2)));
     }
 
-    public double perimeter(){
-        return 2 * Math.PI * this.radius;
+    public void printPerimeter(){
+        float res = 2 * (float)(Math.PI * this.radius);
+        System.out.println("Perimeter equals to: " + res);
     }
 
     public boolean isBig(){
         return this.area() > 20 ? true : false;
     }
 
-    public boolean isEqualTo(Circumference c){
-        return c.radius == this.radius && c.color.equals(this.color) ? true : false;
+    public boolean isEqualTo(Circumference_Solved c){
+        return c.getRadius() == this.radius && c.getColor().equals(this.color) ? true : false;
     }
 
     public void show(){
+        System.out.println("Circumference: ");
         System.out.println("Radius: " + this.radius);
         System.out.println("Color: " + this.color);
     }
