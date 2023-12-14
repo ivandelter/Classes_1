@@ -15,7 +15,7 @@ public class NumberStatistics_Solved {
         this.numElems++;
     }
 
-    public int amoutnOfNumbers(){
+    public int amountOfNumbers(){
         return total;
     }
 
