@@ -3,21 +3,21 @@ import Exercise_6.Point;
 
 public class Straight{
 
-    private int width;
+    private double width;
     private Point pOne;
     private Point pTwo;
 
-    public Straight(int width, Point pOne, Point pTwo){
+    public Straight(double width, Point pOne, Point pTwo){
       this.width = width;
       this.pOne = pOne;
       this.pTwo = pTwo;
     }
 
-    public Straight(int width){
+    public Straight(double width){
         this.width = width;
     }
 
-    public Straight(int width, double xOne, double xTwo, double yOne, double yTwo){
+    public Straight(double width, double xOne, double xTwo, double yOne, double yTwo){
         this.width = width;
         this.pOne = new Point();
         this.pTwo = new Point();
@@ -26,16 +26,6 @@ public class Straight{
         this.pOne.setY(yOne);
         this.pTwo.setY(yTwo);
     }
-
-    /*
-    Mirar https://chat.openai.com/c/76874967-16b6-4a5e-9bf7-b750b866a87d
-    public void setPOne(Point pOne){
-        this.pOne = pOne;
-    }
-
-    public void setPTwo(Point pTwo){
-        this.pTwo = pTwo;
-    }*/
 
     public boolean isHorizontal(){
         return this.pOne.getY() == this.pTwo.getY() ? true : false;
