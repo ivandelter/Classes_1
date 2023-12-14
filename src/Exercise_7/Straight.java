@@ -27,13 +27,15 @@ public class Straight{
         this.pTwo.setY(yTwo);
     }
 
+    /*
+    Mirar https://chat.openai.com/c/76874967-16b6-4a5e-9bf7-b750b866a87d
     public void setPOne(Point pOne){
         this.pOne = pOne;
     }
 
     public void setPTwo(Point pTwo){
         this.pTwo = pTwo;
-    }
+    }*/
 
     public boolean isHorizontal(){
         return this.pOne.getY() == this.pTwo.getY() ? true : false;
