@@ -13,6 +13,10 @@ public class Straight{
       this.pTwo = pTwo;
     }
 
+    public Straight(int width){
+        this.width = width;
+    }
+
     public Straight(int width, double xOne, double xTwo, double yOne, double yTwo){
         this.width = width;
         this.pOne = new Point();
@@ -21,6 +25,14 @@ public class Straight{
         this.pTwo.setX(xTwo);
         this.pOne.setY(yOne);
         this.pTwo.setY(yTwo);
+    }
+
+    public void setPOne(Point pOne){
+        this.pOne = pOne;
+    }
+
+    public void setPTwo(Point pTwo){
+        this.pTwo = pTwo;
     }
 
     public boolean isHorizontal(){
