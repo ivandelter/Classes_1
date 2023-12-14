@@ -36,11 +36,16 @@ public class Straight{
     }
 
     public void highestPoint(){
-        if(this.pOne.getY() > this.pTwo.getY()){
-            this.pOne.show();
-        }else{
-            this.pTwo.show();
+        if(this.pOne.getY() != this.pTwo.getY()){
+            if(this.pOne.getY() > this.pTwo.getY()){
+                this.pOne.show();
+            }else{
+                this.pTwo.show();
+            }
+        } else{
+            System.out.println("They are equal");
         }
+
     }
 
     public double length(){
@@ -53,10 +58,14 @@ public class Straight{
     }
 
     public static void longest(Straight one, Straight two){
-        if(one.length() > two.length()){
-            one.show();
+        if(one.length() != two.length()){
+            if(one.length() > two.length()){
+                one.show();
+            } else{
+                two.show();
+            }
         } else{
-            two.show();
+            System.out.println("They are equal");
         }
     }
 
