@@ -72,9 +72,9 @@ public class Straight{
     public void show(){
         System.out.println("Width: " + this.width);
         System.out.println("Point one: ");
-        pOne.show();
+        this.pOne.show();
         System.out.println("Point two: ");
-        pTwo.show();
+        this.pTwo.show();
     }
 
 }

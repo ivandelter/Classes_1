@@ -23,4 +23,31 @@ public class Straight_Solved {
         this.p2.setY(yTwo);
     }
 
+    public boolean isHorizontal(){
+        return this.p1.getY() == this.p2.getY() ? true : false;
+    }
+
+    public boolean isVertical(){
+        return this.p1.getX() == this.p2.getX() ? true : false;
+    }
+
+    public double length(){
+        double x = Math.abs(this.p1.getX() - this.p2.getX());
+        double y = Math.abs(this.p1.getY() - this.p2.getY());
+        double result = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+        return result;
+    }
+
+    public Straight_Solved longest(Straight_Solved s){
+        return this.length() > s.length() ? this : s;
+    }
+
+    public void show(){
+        System.out.println("Width: " + this.width);
+        System.out.println("Point one: ");
+        this.p1.show();
+        System.out.println("Point two: ");
+        this.p2.show();
+    }
+
 }
